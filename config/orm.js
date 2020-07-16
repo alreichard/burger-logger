@@ -11,7 +11,7 @@ selectAll: function(cb) {
     });
   },
 insertOne: function(cols, vals, cb){
-  var queryString = "INSERT INTO burgers WHERE ?? = ?";
+  var queryString = "INSERT INTO burgers (??) VALUES (?)";
   connection.query(queryString, [cols, vals], function(err, result) {
     if (err) {
       throw err;
@@ -21,7 +21,7 @@ insertOne: function(cols, vals, cb){
   });
 },
 updateOne: function(objColVals, condition, cb){
-      var queryString = "UPDATE tables SET objectColVal WHERE condition"
+      var queryString = "UPDATE burgers SET ? WHERE ??"
       connection.query(queryString, [objColVals, condition], function(err, result) {
         if (err) {
           throw err;

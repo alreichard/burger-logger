@@ -1,0 +1,8 @@
+<li class = "list-group-item">
+	{{burger_name}}
+{{#unless devoured}}
+	<button class="change-burger" data-id="{{id}}" data-neweaten="1">
+		I ate it
+	</button>
+	{{/unless}}
+</li>

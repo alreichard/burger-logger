@@ -1,25 +1,7 @@
-<h1>Have I eaten this burger?</h1>
 
-<h2>I haven't eaten these</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burgers-eater devour=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
 
-<h2>I have eaten these</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burgers-eater devour=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
+<div class="ml-5 mt-3">
 <h2>Add a new burger to try</h2>
 <form class="create-form">
 
@@ -28,8 +10,41 @@
     <input type="text" id="burg" name="name">
   </div>
 
+
   <button type="submit">Add burger</button>
 </form>
+</div>
+<h1 class= "ml-5 mb-3"> Have I eaten this burger?</h1>
+
+<div class="container">
+  <div class="row row-cols-2">
+          <div class="col">
+
+<h2>I haven't eaten these</h2>
+
+<ul class = "list-group">
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burgers-eater devour=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+</div>
+    <div class="col">
+
+<h2>I have eaten these</h2>
+
+<ul class = "list-group">
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burgers-eater devour=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+</div>
+
+</div>
+</div>
 
 
 
