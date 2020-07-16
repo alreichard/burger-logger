@@ -21,7 +21,7 @@ insertOne: function(cols, vals, cb){
   });
 },
 updateOne: function(objColVals, condition, cb){
-      var queryString = "UPDATE burgers SET ? WHERE ??"
+      var queryString = "UPDATE burgers SET ? WHERE ?"
       connection.query(queryString, [objColVals, condition], function(err, result) {
         if (err) {
           throw err;
